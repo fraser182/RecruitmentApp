@@ -23,7 +23,7 @@ The app should display all jobs on the main page, without any other clutter (adv
  * The app should allow users to filter jobs by location.
  * The app should allow users to filter jobs by salary range.
 ### Global Scope
-The app should allow users to browse on mobile.
+  * The app should allow users to browse on mobile.
  * The app should allow clients to add jobs on mobile.
  * The app should have a secure login for our Moderator Team.
  * The app should allow the client to have their own login details so they can manage their job listings.
