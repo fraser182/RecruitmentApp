@@ -5,7 +5,7 @@ class Job extends Component{
 
   render(){
     return(
-      <div class="job">
+      <div className="job">
       <h4>Job</h4>
       </div>
     )

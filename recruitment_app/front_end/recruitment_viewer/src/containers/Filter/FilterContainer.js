@@ -5,7 +5,7 @@ class FilterContainer extends Component {
 
   render(){
     return(
-      <div class="filter-container">
+      <div className="filter-container">
       <h2>Filter Container</h2>
       </div>
 

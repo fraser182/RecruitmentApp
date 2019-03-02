@@ -6,7 +6,7 @@ class JobList extends Component{
 
   render(){
     return(
-      <div class="jobs-list-container">
+      <div className="jobs-list-container">
       <h3>Jobs List</h3>
       <Job />
       </div>
