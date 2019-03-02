@@ -11,13 +11,13 @@ class App extends Component {
   render() {
     return (
       <div className ="main-app">
-    
+
           <React.Fragment>
           <h2>Main App Container</h2>
             <HeaderContainer />
             <FilterContainer />
             <JobContainer />
-                <FooterContainer />
+            <FooterContainer />
             </React.Fragment>
 
       </div>
