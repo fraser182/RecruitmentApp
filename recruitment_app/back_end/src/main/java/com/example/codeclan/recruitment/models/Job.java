@@ -1,23 +1,48 @@
 package com.example.codeclan.recruitment.models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.*;
+
+@Entity
+@Table(name="jobs")
 public class Job {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "company_name")
     private String companyName;
+    @Column(name = "contact_email")
     private String contactEmail;
+    @Column(name = "contact_phoneNumber")
     private String contactPhoneNumber;
+    @Column(name = "contact_name")
     private String contactName;
+    @Column(name = "title")
     private String title;
+    @Column(name = "salary")
     private String salary;
+    @Column(name = "location")
     private String location;
+    @Column(name = "application_url")
     private String applicationUrl;
+    @Column(name = "company_culture", columnDefinition="text")
     private String companyCulture;
+    @Column(name = "tech_stack", columnDefinition="text")
     private String techStack;
+    @Column(name = "your_team", columnDefinition="text")
     private String yourTeam;
+    @Column(name = "responsibilities", columnDefinition="text")
     private String responsibilities;
+    @Column(name = "requirements", columnDefinition="text")
     private String requirements;
+    @Column(name = "role")
     private String role;
+    @Column(name = "skill_level")
     private String skillLevel;
+    @Column(name = "job_type")
     private String jobType;
 
     public Job(String companyName, String contactEmail, String contactPhoneNumber, String contactName, String title, String salary, String location, String applicationUrl, String companyCulture, String techStack, String yourTeam, String responsibilities, String requirements, String role, String skillLevel, String jobType) {
