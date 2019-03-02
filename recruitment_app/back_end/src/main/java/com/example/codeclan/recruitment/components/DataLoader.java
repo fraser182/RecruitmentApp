@@ -49,6 +49,20 @@ public class DataLoader implements ApplicationRunner {
                         "and build scalable systems.", "3+ years of Java", "Software Developer",
                 "Mid-Level", "Full-Time");
         jobRepository.save(backEndDev);
+        Job tester = new Job("Big Pixel Studios", "jeses@bigpixelstudios.co.uk",
+                "01413237434", "Jeses", "QA Tester",
+                "28,000", "Glasgow", "www.bigpixelstudios.co.uk/",
+                "We are passionate about gaming and creating fun and interactive products", "Swift",
+                "You will be working with a professional team who are passionate about technology and work on " +
+                        "cutting-edge projects.",
+                "As an embedded tester, helping to build a new QA department within an experienced London based studio, " +
+                        "you’ll take ownership of significant elements of testing in our games as well as being an excellent communicator " +
+                        "with strong people and technical skills. " +
+                        "you'll have involvement in all aspects of design and development.",
+                "Knowledge of iOS and Android Family of devices and mobile submission process and knowledge of F2P",
+                "Tester", "Junior", "Full-Time");
+        jobRepository.save(tester);
+
     }
 
 
