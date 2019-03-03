@@ -21,11 +21,12 @@ class FilterContainer extends Component {
   render(){
     return(
       <div className="filter-container">
-      <div>
   <Button color="primary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Search Type</Button>
   <Collapse isOpen={this.state.collapse}>
     <Card>
       <CardBody>
+      <div className="d-flex mb-3 example-parent">
+      <div className="p-2 col">
       <legend>Role</legend>
       <FormGroup tag="fieldset">
 
@@ -57,7 +58,8 @@ class FilterContainer extends Component {
             </Label>
           </FormGroup>
         </FormGroup>
-
+      </div>
+      <div className="p-2 col">
         <legend>Skill</legend>
         <FormGroup tag="fieldset">
 
@@ -82,7 +84,8 @@ class FilterContainer extends Component {
               </Label>
             </FormGroup>
           </FormGroup>
-
+          </div>
+          <div className="p-2 col">
           <legend>Type</legend>
           <FormGroup tag="fieldset">
 
@@ -114,13 +117,14 @@ class FilterContainer extends Component {
                 </Label>
               </FormGroup>
             </FormGroup>
+            </div>
 
-
+            </div>
       </CardBody>
     </Card>
   </Collapse>
-</div>
-      </div>
+  </div>
+
 
     )
   }
