@@ -5,11 +5,11 @@ const Job = (props) => {
   if (!props.job){
     return null
   }
-
+  //React.Fragment is acting as a container that you cannot style.
   return (
+
     <React.Fragment>
     <div className="job">
-
     <p> {props.job.title}</p>
     <p> {props.job.jobType}</p>
     <p>{props.job.salary}</p>

@@ -1,39 +1,66 @@
 import React, {Component} from 'react';
 import '../../css/HeaderContainer.css';
+import { Container } from 'reactstrap';
+import { Nav, NavItem, NavLink } from 'reactstrap';
+
 
 class HeaderContainer extends Component {
+  constructor(props){
+    super(props);
+    this.toggleNavbar = this.toggleNavbar.bind(this);
+    this.state = {
+      collapsed: true
+    };
+  }
+
+  toggleNavbar() {
+    this.setState({
+      collapsed: !this.state.collapsed
+    });
+  }
 
   render(){
     return(
-      <div className="main-header-container">
-        <h2>Header Container</h2>
-          <div className="header-left">
-              <h3>header left container</h3>
-              <div className="header-left-top">
-              <h4>LOGO</h4>
-              </div>
-              <div className="header-left-bottom">
-              <h4>the best website in the world</h4>
-              </div>
-          </div>
-          <div className="header-right">
-          <h3>header right container</h3>
-              <div clasName="header-right-menu">
-                <div className="menu-item-post-job">
-                <p>post job</p>
-                </div>
-                <div className="menu-item-pricing">
-                <p>pricing</p>
-                </div>
-                <div className="menu-item-about">
-                <p>about</p>
-                </div>
-                <div className="menu-item-contact">
-                <p>contact</p>
-                </div>
-              </div>
-          </div>
+
+  <div className="header-container">
+      <div className="header-left-techjobs">
+        <Container fluid>
+          <h1 className="display-3">Tech Jobs</h1>
+          <p className="lead">This is the new way to recruit tech.</p>
+        </Container>
       </div>
+      <div className="header-right">
+      <div className="text-right">
+        <Nav vertical>
+        <NavItem>
+            <NavLink href="#">Post a Job</NavLink>
+            </NavItem>
+            <NavItem>
+            <NavLink href="#">Pricing</NavLink>
+            </NavItem>
+            <NavItem>
+            <NavLink href="#">About</NavLink>
+            </NavItem>
+            <NavItem>
+            <NavLink href="#">Contact</NavLink>
+            </NavItem>
+            </Nav>
+          </div>
+        </div>
+  </div>
+      // <div className="main-header-container">
+      //   <h2>Header Container</h2>
+      //     <div className="header-left">
+      //         <h3>header left container</h3>
+      //         <div className="header-left-top">
+      //         <h4>LOGO</h4>
+      //         </div>
+      //         <div className="header-left-bottom">
+      //         <h4>the best website in the world</h4>
+      //         </div>
+      //     </div>
+
+      // </div>
 
     )
   }

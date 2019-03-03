@@ -14,7 +14,7 @@ class App extends Component {
       <div className ="main-app">
       <Router>
           <React.Fragment>
-          <h2>Main App Container</h2>
+        
             <HeaderContainer />
             <FilterContainer />
             <Switch>
