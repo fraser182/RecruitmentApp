@@ -8,10 +8,10 @@ const Job = (props) => {
   }
 
 
+
   return (
 
     <div className="job" id="toggler">
-
     <p> {props.job.title}</p>
     <p> {props.job.jobType}</p>
     <p>{props.job.salary}</p>
