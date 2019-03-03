@@ -18,7 +18,7 @@ class HeaderContainer extends Component {
           </div>
           <div className="header-right">
           <h3>header right container</h3>
-              <div clasName="header-right-menu">
+              <div className="header-right-menu">
                 <div className="menu-item-post-job">
                 <p>post job</p>
                 </div>

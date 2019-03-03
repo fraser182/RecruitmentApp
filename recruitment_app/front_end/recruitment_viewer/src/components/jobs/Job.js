@@ -1,18 +1,24 @@
 import React from 'react';
 import '../../css/Jobs/Job.css';
+import { UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
 
 const Job = (props) => {
   if (!props.job){
     return null
   }
 
+
   return (
-    <React.Fragment>
-    <div className="job">
+
+    <div className="job" id="toggler">
 
     <p> {props.job.title}</p>
     <p> {props.job.jobType}</p>
     <p>{props.job.salary}</p>
+    <UncontrolledCollapse toggler="#toggler">
+         <Card>
+           <CardBody>
+
     <p>{props.job.skillLevel}</p>
     <p>{props.job.techStack}</p>
     <p> {props.job.companyName} </p>
@@ -22,8 +28,12 @@ const Job = (props) => {
     <p>{props.job.responsibilities}</p>
     <p>{props.job.companyCulture}</p>
     <p> {props.job.yourTeam} </p>
-    </div>
-    </React.Fragment>
+
+
+    </CardBody>
+      </Card>
+    </UncontrolledCollapse>
+      </div>
   )
 }
 
