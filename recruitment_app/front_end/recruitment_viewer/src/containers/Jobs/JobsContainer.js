@@ -23,7 +23,6 @@ componentDidMount(){
     return(
 
       <div className="job-container">
- <Button color="danger">Danger!</Button>
       <JobList jobs={this.state.jobs} />
 
       </div>
