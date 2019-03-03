@@ -1,15 +1,19 @@
-import React, {Component} from 'react';
+import React from 'react';
 import '../../css/Jobs/Job.css';
 
-class Job extends Component{
-
-  render(){
-    return(
-      <div className="job">
-      <h4>Job</h4>
-      </div>
-    )
+const Job = (props) => {
+  if (!props.job){
+    return null
   }
+
+  // const url = "/jobs/" + props.job.id;
+  return (
+    <React.Fragment>
+    <a className="job">
+    {props.job.companyName}
+    </a>
+    </React.Fragment>
+  )
 }
 
 export default Job;
