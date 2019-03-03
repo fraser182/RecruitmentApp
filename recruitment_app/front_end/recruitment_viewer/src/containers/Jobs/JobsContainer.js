@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import JobList from '../../components/jobs/JobList.js';
 import '../../css/Jobs/JobsContainer.css';
+import { Button } from 'reactstrap';
 
 import Request from '../../helpers/request.js';
 
@@ -20,7 +21,9 @@ componentDidMount(){
 
   render(){
     return(
+
       <div className="job-container">
+ <Button color="danger">Danger!</Button>
       <JobList jobs={this.state.jobs} />
 
       </div>
