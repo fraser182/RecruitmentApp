@@ -21,7 +21,7 @@ class FilterContainer extends Component {
   render(){
     return(
       <div className="filter-container">
-  <Button color="primary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Search Type</Button>
+  <Button outline color="secondary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Search Type</Button>
   <Collapse isOpen={this.state.collapse}>
     <Card>
       <CardBody>
