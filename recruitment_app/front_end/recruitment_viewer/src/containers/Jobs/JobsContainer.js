@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import JobList from '../../components/jobs/JobList.js';
-import '../../css/Jobs/JobContainer.css';
+import '../../css/Jobs/JobsContainer.css';
 
 import Request from '../../helpers/request.js';
 
-class JobContainer extends Component {
+class JobsContainer extends Component {
   constructor(props){
       super(props);
       this.state = {jobs: []}
@@ -30,4 +30,4 @@ componentDidMount(){
 
 }
 
-export default JobContainer;
+export default JobsContainer;

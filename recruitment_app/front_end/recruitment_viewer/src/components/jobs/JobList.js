@@ -5,16 +5,16 @@ import Job from './Job.js';
 
 const JobList = (props) => {
   const jobs = props.jobs.map((job, index) => {
-    return (<li key={index} className="jobs-list-container">
-    <Job job={job} />
-    </li>
+    return (
+
+    <Job job={job} key={index}/>
     )
   })
 
   return (
-  		<ul className="component-list">
+  		<div className="jobs-container">
   	    {jobs}
-  	  </ul>
+  	  </div>
 
   	)
 
@@ -22,21 +22,3 @@ const JobList = (props) => {
 }
 
 export default JobList;
-
-
-// const PirateList = (props) => {
-// 	const pirates = props.pirates.map((pirate) => {
-// 		 	return (<li key={pirate.id} className="component-item">
-// 				<Pirate pirate={pirate} />
-// 			</li>
-// 		)
-// 		})
-//
-// 	return (
-// 		<ul className="component-list">
-// 	    {pirates}
-// 	  </ul>
-//
-// 	)
-// }
-//  export default PirateList;

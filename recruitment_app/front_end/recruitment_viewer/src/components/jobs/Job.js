@@ -6,12 +6,23 @@ const Job = (props) => {
     return null
   }
 
-  // const url = "/jobs/" + props.job.id;
   return (
     <React.Fragment>
-    <a className="job">
-    {props.job.companyName}
-    </a>
+    <div className="job">
+
+    <p> {props.job.title}</p>
+    <p> {props.job.jobType}</p>
+    <p>{props.job.salary}</p>
+    <p>{props.job.skillLevel}</p>
+    <p>{props.job.techStack}</p>
+    <p> {props.job.companyName} </p>
+    <p> {props.job.location}</p>
+    <p>{props.job.applicationUrl}</p>
+    <p>{props.job.yourTeam}</p>
+    <p>{props.job.responsibilities}</p>
+    <p>{props.job.companyCulture}</p>
+    <p> {props.job.yourTeam} </p>
+    </div>
     </React.Fragment>
   )
 }
