@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import '../../css/HeaderContainer.css';
 import { Container } from 'reactstrap';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import { Nav, NavItem, NavLink } from 'reactstrap';
+import {BrowserRouter as Router } from 'react-router-dom';
+
 import NavBar from '../../NavBar.js'
 
 
