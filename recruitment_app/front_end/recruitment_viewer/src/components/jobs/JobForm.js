@@ -7,32 +7,34 @@ const JobsForm = (props) => {
   function handleSubmit(event){
     event.preventDefault();
     const job = {
+      "applicationUrl": event.target.applicationUrl.value,
+      "companyCulture": event.target.companyCulture.value,
       "companyName": event.target.companyName.value,
-      "email": event.target.contactEmail.value,
+      "contactEmail": event.target.contactEmail.value,
       "contactName": event.target.contactName.value,
-      "phoneNumber": event.target.contactPhoneNumber.value,
+      "contactPhoneNumber": event.target.contactPhoneNumber.value,
       "title": event.target.title.value,
       "salary": event.target.salary.value,
       "location": event.target.location.value,
-      "applicationUrl": event.target.applicationUrl.value,
-      "companyCulture": event.target.companyCulture.value,
+
+
       "techStack": event.target.techStack.value,
       "yourTeam": event.target.yourTeam.value,
       "responsibilities": event.target.responsibilities.value,
       "requirements": event.target.requirements.value,
       "role": event.target.role.value,
-      "skill": event.target.skillLevel.value,
-      "type": event.target.jobType.value,
+      "skillLevel": event.target.skillLevel.value,
+      "jobType": event.target.jobType.value
     }
 
     props.handleJobPost(job)
-    
+
   }
 
 
     return (
 <div className="jobs-form-container">
-      <Form>
+      <Form onSubmit={handleSubmit}>
 
       <FormGroup>
         <Label for="exampleText">Company Name</Label>
@@ -41,7 +43,7 @@ const JobsForm = (props) => {
 
           <FormGroup>
           <Label for="exampleEmail">Contact Email</Label>
-          <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+          <Input type="email" name="contactEmail" id="exampleEmail" placeholder="with a placeholder" />
           </FormGroup>
 
           <FormGroup>
@@ -51,7 +53,7 @@ const JobsForm = (props) => {
 
           <FormGroup>
           <Label for="exampleText">Contact Phone Number</Label>
-          <Input type="textarea" name="phoneNumber" id="exampleText" />
+          <Input type="textarea" name="contactPhoneNumber" id="exampleText" />
           </FormGroup>
 
           <FormGroup>
@@ -77,7 +79,7 @@ const JobsForm = (props) => {
 
           <FormGroup>
           <Label for="exampleUrl">Application URL</Label>
-          <Input type="url" name="url" id="applicationUrl" placeholder="url placeholder"/>
+          <Input type="text" name="applicationUrl" id="url" placeholder="url placeholder"/>
           </FormGroup>
 
           <FormGroup>
@@ -117,7 +119,7 @@ const JobsForm = (props) => {
 
           <FormGroup>
             <Label for="exampleSelect">Skill</Label>
-            <Input type="select" name="skill" id="exampleSelect">
+            <Input type="select" name="skillLevel" id="exampleSelect">
             <option>Junior</option>
             <option>Mid-Level</option>
             <option>Senior</option>
@@ -126,7 +128,7 @@ const JobsForm = (props) => {
 
           <FormGroup>
             <Label for="exampleSelect">Type</Label>
-            <Input type="select" name="type" id="exampleSelect">
+            <Input type="select" name="jobType" id="exampleSelect">
             <option>Full-Time</option>
             <option>Part-Time</option>
             <option>Internship</option>
