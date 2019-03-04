@@ -7,9 +7,12 @@ const JobList = (props) => {
   const jobs = props.jobs.map((job, index) => {
     return (
 
-    <Job job={job} key={index}/>
+    <Job job={job} key={index} />
+
     )
   })
+
+    console.log('joblist', props);
 
   return (
   		<div className="jobs-container">

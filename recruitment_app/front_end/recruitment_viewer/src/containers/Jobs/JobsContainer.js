@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import JobList from '../../components/jobs/JobList.js';
 import '../../css/Jobs/JobsContainer.css';
-import { Button } from 'reactstrap';
+
 
 import Request from '../../helpers/request.js';
 
