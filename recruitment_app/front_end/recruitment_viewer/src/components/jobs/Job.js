@@ -8,18 +8,19 @@ const Job = (props) => {
   }
 
 
-console.log('test before', props.job);
-console.log('Company Name', props.job.companyName);
-const expandDivName = props.job.companyName;
+// console.log('test before', props.job);
+// console.log('Unique Identifier', props.job.dateCreated);
+const expandDivId = `L` + props.job.dateCreated;
+const hashExpandedDivId = `#` + expandDivId;
 
   return (
 
-    <div className="job" id="toggler">
+    <div className="job" id={expandDivId}>
 
     <p> {props.job.title}</p>
     <p> {props.job.jobType}</p>
     <p>{props.job.salary}</p>
-    <UncontrolledCollapse toggler="#toggler">
+    <UncontrolledCollapse toggler={hashExpandedDivId}>
 
 
     <p>{props.job.skillLevel}</p>

@@ -4,15 +4,14 @@ import Job from './Job.js';
 
 
 const JobList = (props) => {
-  const jobs = props.jobs.map((job, index) => {
+  const jobs = props.jobs.map(job => {
     return (
 
-    <Job job={job} key={index} />
+    <Job job={job} key={job.dateCreated} />
 
     )
   })
 
-    console.log('joblist', props);
 
   return (
   		<div className="jobs-container">
