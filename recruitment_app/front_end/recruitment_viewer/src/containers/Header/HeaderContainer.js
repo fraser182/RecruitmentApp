@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import '../../css/HeaderContainer.css';
 import { Container } from 'reactstrap';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import { Nav, NavItem, NavLink } from 'reactstrap';
+import JobsFormContainer from '../Jobs/JobsFormContainer.js'
+import NavBar from '../../NavBar.js'
 
 
 class HeaderContainer extends Component {
@@ -19,10 +22,10 @@ class HeaderContainer extends Component {
     });
   }
 
+  // http://localhost:3000/pirates/new
+
   render(){
     return(
-
-
   <div className="header-container">
       <div className="header-left-techjobs">
         <Container fluid>
@@ -31,23 +34,19 @@ class HeaderContainer extends Component {
         </Container>
       </div>
       <div className="header-right">
-      <div className="text-right">
-        <Nav vertical>
-        <NavItem>
-            <NavLink href="#">Post a Job</NavLink>
-            </NavItem>
-            <NavItem>
-            <NavLink href="#">Pricing</NavLink>
-            </NavItem>
-            <NavItem>
-            <NavLink href="#">About</NavLink>
-            </NavItem>
-            <NavItem>
-            <NavLink href="#">Contact</NavLink>
-            </NavItem>
-            </Nav>
+          <div className="text-right">
+          <Router>
+          <React.Fragment>
+          <NavBar/>
+              <Switch>
+                <Route exact path="/jobs/new" render={(props) =>{
+                  return <JobsFormContainer />
+                  }}/>
+                </Switch>
+          </React.Fragment>
+          </Router>
           </div>
-        </div>
+      </div>
   </div>
       // <div className="main-header-container">
       //   <h2>Header Container</h2>
