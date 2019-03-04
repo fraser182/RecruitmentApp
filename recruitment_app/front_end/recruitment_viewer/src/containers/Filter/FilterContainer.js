@@ -32,28 +32,28 @@ class FilterContainer extends Component {
 
           <FormGroup check>
             <Label check>
-              <Input type="radio" name="softwareDeveloper" />{' '}
+              <Input type="radio" name="radio"  value="option1"/>{' '}
               Software Developer
             </Label>
           </FormGroup>
 
           <FormGroup check>
             <Label check>
-              <Input type="radio" name="tester" />{' '}
+              <Input type="radio" name="tester" value="option1"/>{' '}
               Tester
             </Label>
           </FormGroup>
 
           <FormGroup check>
             <Label check>
-              <Input type="radio" name="productOwner" />{' '}
+              <Input type="radio" name="productOwner" value="option1"/>{' '}
               Product Owner
             </Label>
           </FormGroup>
 
           <FormGroup check>
             <Label check>
-              <Input type="radio" name="backEndDeveloper" />{' '}
+              <Input type="radio" name="backEndDeveloper" value="option1"/>{' '}
               Back-End Developer
             </Label>
           </FormGroup>

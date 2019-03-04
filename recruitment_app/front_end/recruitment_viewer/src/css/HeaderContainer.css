@@ -6,16 +6,7 @@
   padding: 1.5rem;
 }
 
-.header-left-techjobs{
-
-
-}
-
-.header-right{
-
-
-}
-
-.header-right-menu{
-
-}
+.active {
+    color: red;
+    text-decoration: none;
+  }

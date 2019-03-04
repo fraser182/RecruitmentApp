@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
-export default class Example extends React.Component {
+class JobsFormContainer extends React.Component {
   render() {
     return (
       <Form>
@@ -109,3 +109,5 @@ export default class Example extends React.Component {
     );
   }
 }
+
+export default JobsFormContainer;
