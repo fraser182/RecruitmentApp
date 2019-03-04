@@ -24,7 +24,6 @@ componentDidMount(){
 
       <div className="job-container">
       <JobList jobs={this.state.jobs} />
-
       </div>
 
     )

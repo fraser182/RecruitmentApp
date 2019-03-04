@@ -3,7 +3,6 @@ import '../../css/HeaderContainer.css';
 import { Container } from 'reactstrap';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import { Nav, NavItem, NavLink } from 'reactstrap';
-import JobsFormContainer from '../Jobs/JobsFormContainer.js'
 import NavBar from '../../NavBar.js'
 
 
@@ -12,7 +11,8 @@ class HeaderContainer extends Component {
     super(props);
     this.toggleNavbar = this.toggleNavbar.bind(this);
     this.state = {
-      collapsed: true
+      collapsed: true,
+      selected: null
     };
   }
 
@@ -20,6 +20,10 @@ class HeaderContainer extends Component {
     this.setState({
       collapsed: !this.state.collapsed
     });
+  }
+
+  handleSelect(){
+    this.setState({ selected: true })
   }
 
   // http://localhost:3000/pirates/new
@@ -37,12 +41,7 @@ class HeaderContainer extends Component {
           <div className="text-right">
           <Router>
           <React.Fragment>
-          <NavBar/>
-              <Switch>
-                <Route exact path="/jobs/new" render={(props) =>{
-                  return <JobsFormContainer />
-                  }}/>
-                </Switch>
+          <NavBar onSelect = {this.handleSelect}/>
           </React.Fragment>
           </Router>
           </div>
