@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../css/Jobs/Job.css';
-import { UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
+import { UncontrolledCollapse} from 'reactstrap';
 
 const Job = (props) => {
   if (!props.job){
@@ -8,16 +8,19 @@ const Job = (props) => {
   }
 
 
+console.log('test before', props.job);
+console.log('Company Name', props.job.companyName);
+const expandDivName = props.job.companyName;
 
   return (
 
     <div className="job" id="toggler">
+
     <p> {props.job.title}</p>
     <p> {props.job.jobType}</p>
     <p>{props.job.salary}</p>
     <UncontrolledCollapse toggler="#toggler">
-         <Card>
-           <CardBody>
+
 
     <p>{props.job.skillLevel}</p>
     <p>{props.job.techStack}</p>
@@ -29,9 +32,6 @@ const Job = (props) => {
     <p>{props.job.companyCulture}</p>
     <p> {props.job.yourTeam} </p>
 
-
-    </CardBody>
-      </Card>
     </UncontrolledCollapse>
       </div>
   )

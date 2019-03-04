@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import HeaderContainer from './containers/Header/HeaderContainer.js';
 import FilterContainer from './containers/Filter/FilterContainer.js';
 import JobsContainer from './containers/Jobs/JobsContainer.js';
@@ -14,12 +14,12 @@ class App extends Component {
       <div className ="main-app">
       <Router>
           <React.Fragment>
-        
+
             <HeaderContainer />
             <FilterContainer />
-            <Switch>
+
             <Route exact path="/" component={JobsContainer} />
-          </Switch>
+
             <FooterContainer />
             </React.Fragment>
           </Router>
