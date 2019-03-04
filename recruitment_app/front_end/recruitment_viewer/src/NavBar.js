@@ -12,7 +12,7 @@ const NavBar = ({ onSelect }) => {
           <Link to="#" onClick={onSelect}>Pricing</Link>
         </li>
         <li className="navLink">
-          <Link to="#" onClick={onSelect}>About</Link>
+          <Link to="/about" onClick={onSelect}>About</Link>
         </li>
         <li className="navLink">
           <Link to="#" onClick={onSelect}>Contact</Link>
