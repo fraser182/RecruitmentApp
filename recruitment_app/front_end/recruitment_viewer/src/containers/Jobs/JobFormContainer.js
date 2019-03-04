@@ -10,7 +10,9 @@ class JobsFormContainer extends Component {
 
 
   handleJobPost(job){
+    console.log('did we get this job to show', job);
     const request = new Request();
+    console.log('if you see this, the request was made');
     request.post('/jobs', job).then(() => {
       window.location = '/';
     })
