@@ -1,29 +1,56 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
-class JobsForm extends Component {
-  render() {
+
+const JobsForm = (props) => {
+
+  function handleSubmit(event){
+    event.preventDefault();
+    const job = {
+      "companyName": event.target.companyName.value,
+      "email": event.target.contactEmail.value,
+      "contactName": event.target.contactName.value,
+      "phoneNumber": event.target.contactPhoneNumber.value,
+      "title": event.target.title.value,
+      "salary": event.target.salary.value,
+      "location": event.target.location.value,
+      "applicationUrl": event.target.applicationUrl.value,
+      "companyCulture": event.target.companyCulture.value,
+      "techStack": event.target.techStack.value,
+      "yourTeam": event.target.yourTeam.value,
+      "responsibilities": event.target.responsibilities.value,
+      "requirements": event.target.requirements.value,
+      "role": event.target.role.value,
+      "skill": event.target.skillLevel.value,
+      "type": event.target.jobType.value,
+    }
+
+    props.handleJobPost(job)
+    
+  }
+
+
     return (
 <div className="jobs-form-container">
       <Form>
 
       <FormGroup>
-        <Label for="exampleText">Text Area</Label>
-        <Input type="textarea" name="text" id="exampleText" />
+        <Label for="exampleText">Company Name</Label>
+        <Input type="textarea" name="companyName" id="exampleText" />
       </FormGroup>
 
           <FormGroup>
-          <Label for="exampleEmail">Email</Label>
+          <Label for="exampleEmail">Contact Email</Label>
           <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
           </FormGroup>
 
           <FormGroup>
-           <Label for="exampleText">Name</Label>
-           <Input type="textarea" name="text" id="exampleText" />
+           <Label for="exampleText">Contact Name</Label>
+           <Input type="textarea" name="contactName" id="exampleText" />
           </FormGroup>
 
           <FormGroup>
-          <Label for="exampleText">Phone Number</Label>
+          <Label for="exampleText">Contact Phone Number</Label>
           <Input type="textarea" name="phoneNumber" id="exampleText" />
           </FormGroup>
 
@@ -107,13 +134,12 @@ class JobsForm extends Component {
             </Input>
           </FormGroup>
 
-          <Button>Submit</Button>
+          <Button type="submit">Submit</Button>
       </Form>
 
 
 </div>
     );
-  }
 }
 
 export default JobsForm;
