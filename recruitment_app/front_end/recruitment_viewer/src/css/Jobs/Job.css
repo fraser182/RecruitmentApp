@@ -1,5 +1,26 @@
 .job{
-  background-color: #6a6c70;
   color: white;
   border: 1px solid white;
+}
+
+.job:nth-child(4n+1) {
+    background: blue;
+    border: 1px solid blue;
+
+}
+
+.job:nth-of-type(4n+2) {
+    background: green;
+      border: 1px solid green;
+}
+
+.job:nth-of-type(4n+3) {
+    background: red;
+      border: 1px solid red;
+}
+
+
+.job:nth-of-type(4n+4) {
+    background: pink;
+      border: 1px solid pink;
 }
