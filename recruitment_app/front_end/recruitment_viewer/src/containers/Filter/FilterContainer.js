@@ -5,45 +5,66 @@ import { FormGroup, Label, Input } from 'reactstrap';
 class FilterContainer extends Component {
 
   constructor(props) {
-    super(props);
+     super(props);
 
-    this.state = {
-      collapse: false,
-      role: null,
-      skill: null,
-      type: null
-    };
+     this.state = {
+       collapse: false,
+       criteria: {
+         role: null,
+         skillLevel: null,
+         jobType: null
+       }
 
-    this.handleSelection = this.handleSelection.bind(this);
-    this.filterJobs = this.filterJobs.bind(this);
-    this.toggle = this.toggle.bind(this);
-  }
+     };
 
-  toggle() {
-    this.setState({ collapse: !this.state.collapse });
-  }
+     this.handleSelection = this.handleSelection.bind(this);
+     this.filterJobs = this.filterJobs.bind(this);
+     this.toggle = this.toggle.bind(this);
+   }
 
-  handleSelection(event){
-    this.setState({ [event.target.name]: event.target.value }, () => {
-      this.filterJobs()
-    });
-  }
+   toggle() {
+     this.setState({ collapse: !this.state.collapse });
+   }
 
-  filterJobs(){
-    const filteredJobs = this.props.jobsData.filter(job => {
-      return job.role === this.state.role
-    })
+   handleSelection(event){
+     let newCriteria = this.state.criteria
+     newCriteria[event.target.name] = event.target.value
 
-    this.props.handleFilter(filteredJobs);
-  }
+     this.setState({ criteria: newCriteria }, () => {
+       this.filterJobs()
+     });
+   }
 
-  // const roleFilter =
+   filterJobs(){
+     let filteredJobs = this.props.jobsData;
+
+     for(let key in this.state.criteria){
+       let value = this.state.criteria[key]
+       if (value){
+         filteredJobs = filteredJobs.filter(job => {
+           return job[key] === value;
+         })
+       }
+     }
+
+     // if (this.state.role){
+     //   filteredJobs = filteredJobs.filter(job => {
+     //     return job.role === this.state.role
+     //   })
+     // }
+
+
+
+     this.props.handleFilter(filteredJobs);
+   }
 
   render(){
     console.log('allJobs', this.props.jobsData);
     return(
       <div className="filter-container">
-      <Button outline color="secondary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Search Type</Button>
+      <div className="text-right">
+      <Button className="text-right"outline color="secondary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Filter</Button>
+      </div>
       <Collapse isOpen={this.state.collapse}>
       <Card>
       <CardBody>
@@ -87,21 +108,21 @@ class FilterContainer extends Component {
 
       <FormGroup check>
       <Label check>
-      <Input type="radio" name="skill" value="Junior" onClick={this.handleSelection}/>{' '}
+      <Input type="radio" name="skillLevel" value="Junior" onClick={this.handleSelection}/>{' '}
       Junior
       </Label>
       </FormGroup>
 
       <FormGroup check>
       <Label check>
-      <Input type="radio" name="skill" value="Mid-Level" onClick={this.handleSelection}/>{' '}
+      <Input type="radio" name="skillLevel" value="Mid-Level" onClick={this.handleSelection}/>{' '}
       Mid-Level
       </Label>
       </FormGroup>
 
       <FormGroup check>
       <Label check>
-      <Input type="radio" name="skill" value="Senior" onClick={this.handleSelection}/>{' '}
+      <Input type="radio" name="skillLevel" value="Senior" onClick={this.handleSelection}/>{' '}
       Senior
       </Label>
       </FormGroup>
@@ -113,28 +134,28 @@ class FilterContainer extends Component {
 
       <FormGroup check>
       <Label check>
-      <Input type="radio" name="type" value="Full Time" onClick={this.handleSelection}/>{' '}
+      <Input type="radio" name="jobType" value="Full-Time" onClick={this.handleSelection}/>{' '}
       Full Time
       </Label>
       </FormGroup>
 
       <FormGroup check>
       <Label check>
-      <Input type="radio" name="type" value="Part Time" onClick={this.handleSelection}/>{' '}
+      <Input type="radio" name="jobType" value="Part-Time" onClick={this.handleSelection}/>{' '}
       Part Time
       </Label>
       </FormGroup>
 
       <FormGroup check>
       <Label check>
-      <Input type="radio" name="type" value="Internship" onClick={this.handleSelection}/>{' '}
+      <Input type="radio" name="jobType" value="Internship" onClick={this.handleSelection}/>{' '}
       Internship
       </Label>
       </FormGroup>
 
       <FormGroup check>
       <Label check>
-      <Input type="radio" name="type" value="Temporary" onClick={this.handleSelection}/>{' '}
+      <Input type="radio" name="jobType" value="Temporary" onClick={this.handleSelection}/>{' '}
       Temporary
       </Label>
       </FormGroup>

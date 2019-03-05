@@ -25,7 +25,7 @@ const HeaderContainer = (props) => {
                     <Link to="/pricing">Pricing</Link>
                 </li>
                 <li className="navLink">
-                  <Link to="#"><About />About</Link>
+                  <Link to="/about">About</Link>
 
                 </li>
                 <li className="navLink">
