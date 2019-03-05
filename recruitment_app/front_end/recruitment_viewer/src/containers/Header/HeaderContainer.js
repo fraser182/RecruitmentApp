@@ -2,6 +2,7 @@ import React from 'react';
 import '../../css/HeaderContainer.css';
 import { Container } from 'reactstrap';
 import { BrowserRouter as Switch, Route, Link } from 'react-router-dom';
+import About from '../../components/about.js'
 
 
 const HeaderContainer = (props) => {
@@ -21,19 +22,16 @@ const HeaderContainer = (props) => {
                   <Link to='/jobs/new'>Post A Job</Link>
                 </li>
                 <li className="navLink">
-                    <Link to="#">Pricing</Link>
+                    <Link to="/pricing">Pricing</Link>
                 </li>
                 <li className="navLink">
-                  <Link to="#">About</Link>
+                  <Link to="#"><About />About</Link>
+
                 </li>
                 <li className="navLink">
                   <Link to="#">Contact</Link>
                 </li>
               </ul>
-              <Switch>
-                    <Route path='/jobs/new'/>
-
-                        </Switch>
 
             </div>
           </div>

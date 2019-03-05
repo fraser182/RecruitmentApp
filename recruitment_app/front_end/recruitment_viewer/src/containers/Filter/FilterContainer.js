@@ -1,4 +1,3 @@
-
 import React, {Component} from 'react';
 import '../../css/FilterContainer.css';
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
@@ -15,9 +14,6 @@ class FilterContainer extends Component {
   this.setState({ collapse: !this.state.collapse });
 }
 
-
-
-
   render(){
     return(
       <div className="filter-container">
@@ -32,28 +28,28 @@ class FilterContainer extends Component {
 
           <FormGroup check>
             <Label check>
-              <Input type="radio" name="radio"  value="option1"/>{' '}
+              <Input type="radio" name="role"  value="sd"/>{' '}
               Software Developer
             </Label>
           </FormGroup>
 
           <FormGroup check>
             <Label check>
-              <Input type="radio" name="tester" value="option1"/>{' '}
+              <Input type="radio" name="role" value="t"/>{' '}
               Tester
             </Label>
           </FormGroup>
 
           <FormGroup check>
             <Label check>
-              <Input type="radio" name="productOwner" value="option1"/>{' '}
+              <Input type="radio" name="role" value="po"/>{' '}
               Product Owner
             </Label>
           </FormGroup>
 
           <FormGroup check>
             <Label check>
-              <Input type="radio" name="backEndDeveloper" value="option1"/>{' '}
+              <Input type="radio" name="role" value="bed"/>{' '}
               Back-End Developer
             </Label>
           </FormGroup>
@@ -65,21 +61,21 @@ class FilterContainer extends Component {
 
             <FormGroup check>
               <Label check>
-                <Input type="radio" name="junior" />{' '}
+                <Input type="radio" name="skillLevel" value=""/>{' '}
                 Junior
               </Label>
             </FormGroup>
 
             <FormGroup check>
               <Label check>
-                <Input type="radio" name="midLevel" />{' '}
+                <Input type="radio" name="skillLevel" value=""/>{' '}
                 Mid-Level
               </Label>
             </FormGroup>
 
             <FormGroup check>
               <Label check>
-                <Input type="radio" name="senior" />{' '}
+                <Input type="radio" name="skillLevel" value=""/>{' '}
                 Senior
               </Label>
             </FormGroup>
@@ -91,28 +87,28 @@ class FilterContainer extends Component {
 
               <FormGroup check>
                 <Label check>
-                  <Input type="radio" name="fullTime" />{' '}
+                  <Input type="radio" name="jobType" value=""/>{' '}
                   Full Time
                 </Label>
               </FormGroup>
 
               <FormGroup check>
                 <Label check>
-                  <Input type="radio" name="partTime" />{' '}
+                  <Input type="radio" name="jobType" value=""/>{' '}
                   Part Time
                 </Label>
               </FormGroup>
 
               <FormGroup check>
                 <Label check>
-                  <Input type="radio" name="internship" />{' '}
+                  <Input type="radio" name="jobType" value=""/>{' '}
                   Internship
                 </Label>
               </FormGroup>
 
               <FormGroup check>
                 <Label check>
-                  <Input type="radio" name="t2emporary" />{' '}
+                  <Input type="radio" name="jobType" value=""/>{' '}
                   Temporary
                 </Label>
               </FormGroup>
