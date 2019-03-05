@@ -5,7 +5,7 @@ import JobList from '../../components/jobs/JobList.js';
 import JobFormContainer from '../Jobs/JobFormContainer.js';
 import FilterContainer from '../Filter/FilterContainer.js';
 import FooterContainer from '../Footer/FooterContainer.js';
-// import '../../css/MainContainer.css';
+import '../../css/Jobs/mainContainer.css';
 import Request from '../../helpers/request.js';
 
 

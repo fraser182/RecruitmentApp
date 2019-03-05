@@ -62,7 +62,9 @@ class FilterContainer extends Component {
     console.log('allJobs', this.props.jobsData);
     return(
       <div className="filter-container">
-      <Button outline color="secondary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Search Type</Button>
+      <div className="text-right">
+      <Button className="text-right"outline color="secondary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Filter</Button>
+      </div>
       <Collapse isOpen={this.state.collapse}>
       <Card>
       <CardBody>
