@@ -59,7 +59,7 @@ class FilterContainer extends Component {
    }
 
   render(){
-    console.log('allJobs', this.props.jobsData);
+    // console.log('allJobs', this.props.jobsData);
     return(
       <div className="filter-container">
       <div className="text-right">
