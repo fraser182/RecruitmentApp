@@ -1,26 +1,31 @@
 .job{
-  color: white;
-  border: 1px solid white;
+  color: black;
+  border: 1px solid #727C7F;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+p {
+  text-align:justify;
 }
 
 .job:nth-child(4n+1) {
-    background: blue;
-    border: 1px solid blue;
+    background: #98E5FF;
+    border: 1px solid #98E5FF;
 
 }
 
 .job:nth-of-type(4n+2) {
-    background: green;
-      border: 1px solid green;
+    background: #E5F8FF;
+      border: 1px solid #E5F8FF;
 }
 
 .job:nth-of-type(4n+3) {
-    background: red;
-      border: 1px solid red;
+    background: #60787F;
+      border: 1px solid #60787F;
 }
 
 
 .job:nth-of-type(4n+4) {
-    background: pink;
-      border: 1px solid pink;
+    background: #B7C7CC;
+      border: 1px solid #B7C7CC;
 }
