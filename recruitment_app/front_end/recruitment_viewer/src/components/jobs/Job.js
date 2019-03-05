@@ -26,7 +26,7 @@ const Job = (props) => {
 
         <div className="job-upper-right">
           <h5> {props.job.skillLevel}</h5>
-          <p> £ {props.job.salary}</p>
+          <p> £{props.job.salary}</p>
         </div>
 
     </div>
@@ -37,14 +37,12 @@ const Job = (props) => {
       <div className="job-lower-left">
         <p>{props.job.techStack}</p>
         <p>{props.job.applicationUrl}</p>
-
         </div>
 
         <div className="job-lower-right">
         <p>{props.job.yourTeam}</p>
         <p>{props.job.responsibilities}</p>
         <p>{props.job.companyCulture}</p>
-        <p> {props.job.yourTeam} </p>
         </div>
 
       </div>

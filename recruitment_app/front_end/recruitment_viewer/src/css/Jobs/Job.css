@@ -13,8 +13,9 @@
 }
 
 
-p {
-  text-align:justify;
+.job p {
+  font-weight: 300;
+font-size: 1.1em;
 }
 
 .job:nth-child(4n+1) {
@@ -49,9 +50,6 @@ p {
 .job-upper{
   display: flex;
   border: 1px solid red;
-
-
-
 }
 
 .job-upper-left{
@@ -72,6 +70,7 @@ p {
 .job-lower{
   border: 1px solid green;
   display: flex;
+  padding-top: 1em;
 
 }
 
@@ -79,9 +78,12 @@ p {
   border: 1px solid green;
   width: 30%;
   overflow-wrap: break-word;
+  padding-right: 1em;
 }
 
 .job-lower-right{
   border: 1px solid green;
   width: 50%;
+  padding-right: 1em;
+
 }
