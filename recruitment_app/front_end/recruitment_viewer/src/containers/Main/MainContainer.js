@@ -11,16 +11,28 @@ import Request from '../../helpers/request.js';
 
 class MainContainer extends Component {
   constructor(props){
-      super(props);
-      this.state = {jobs: []}
+    super(props);
+    this.state = {
+      jobs: [],
+      allJobs: []
     }
 
-componentDidMount(){
+    this.handleFilter = this.handleFilter.bind(this);
+  }
+
+  componentDidMount(){
     let request = new Request()
     request.get('/jobs').then((data) => {
       console.log('data coming in from back-end',data._embedded.jobs);
-       this.setState({jobs: data._embedded.jobs})
+      this.setState({
+        jobs: data._embedded.jobs,
+        allJobs: data._embedded.jobs
+      })
     })
+  }
+
+  handleFilter(filteredJobs){
+    this.setState({ jobs: filteredJobs })
   }
 
 
@@ -28,22 +40,23 @@ componentDidMount(){
     return (
       <div className ="main-app">
       <Router>
-          <React.Fragment>
-          <HeaderContainer />
-          <FilterContainer />
-            <Switch>
+      <React.Fragment>
+      <HeaderContainer />
+      <FilterContainer jobsData={this.state.allJobs} handleFilter={this.handleFilter} />
+      <Switch>
 
-              <Route exact path="/" render={(props) => {return <JobList jobs={this.state.jobs}/> }}/>
+      <Route exact path="/" render={(props) => {return <JobList jobs={this.state.jobs}/> }}/>
 
 
-              <Route exact path="/jobs/new" render={(props) => { return <JobFormContainer /> }}/>
+      <Route exact path="/jobs/new" render={(props) => { return <JobFormContainer /> }}/>
 
-            </Switch>
-            <FooterContainer />
+      </Switch>
 
-            </React.Fragment>
+      <FooterContainer />
 
-          </Router>
+      </React.Fragment>
+
+      </Router>
       </div>
     );
   }
