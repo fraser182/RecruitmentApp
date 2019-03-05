@@ -23,7 +23,7 @@ class MainContainer extends Component {
   componentDidMount(){
     let request = new Request()
     request.get('/jobs').then((data) => {
-      console.log('data coming in from back-end',data._embedded.jobs);
+      // console.log('data coming in from back-end',data._embedded.jobs);
       this.setState({
         jobs: data._embedded.jobs,
         allJobs: data._embedded.jobs

@@ -1,8 +1,8 @@
 import React from 'react';
 import '../../css/HeaderContainer.css';
 import { Container } from 'reactstrap';
-import { BrowserRouter as Switch, Route, Link } from 'react-router-dom';
-import About from '../../components/about.js'
+import { Link } from 'react-router-dom';
+// import About from '../../components/about.js';
 
 
 const HeaderContainer = (props) => {
