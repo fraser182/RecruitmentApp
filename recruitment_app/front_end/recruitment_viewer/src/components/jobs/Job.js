@@ -6,10 +6,6 @@ const Job = (props) => {
   if (!props.job){
     return null
   }
-
-
-// console.log('test before', props.job);
-// console.log('Unique Identifier', props.job.dateCreated);
 const expandDivId = `L` + props.job.dateCreated;
 const hashExpandedDivId = `#` + expandDivId;
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-// import JobsContainer from '../Jobs/JobsContainer.js';
 import HeaderContainer from '../Header/HeaderContainer.js';
 import JobList from '../../components/jobs/JobList.js';
 import JobFormContainer from '../Jobs/JobFormContainer.js';

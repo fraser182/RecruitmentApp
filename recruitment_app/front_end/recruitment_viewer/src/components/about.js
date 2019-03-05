@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-class ModalExample extends React.Component {
+class About extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,19 +18,18 @@ class ModalExample extends React.Component {
   }
 
   render() {
-      const closeBtn = <button className="close" onClick={this.toggle}>&times;</button>;
-
-      return (
+    return (
       <div>
         <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle} close={closeBtn}>Modal title</ModalHeader>
+          <ModalHeader toggle={this.toggle}>About</ModalHeader>
           <ModalBody>
-          We are a new company, trying to make looking for that next career step in tech that little bit easier.
-          We enjoy the simplicity of a website.
+            We are a recruitment site for tech and only tech. We believe you shouldn't have to break
+            your back searching through endless useless jobs. Finding a job should be just as big a
+            part of the experience of starting a new one. We want to be able to provide you with a
+            simple and useful service to look for the job that looks right for you.
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
             <Button color="secondary" onClick={this.toggle}>Cancel</Button>
           </ModalFooter>
         </Modal>
@@ -38,3 +37,5 @@ class ModalExample extends React.Component {
     );
   }
 }
+
+export default About;
