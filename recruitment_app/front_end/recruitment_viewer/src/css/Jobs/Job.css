@@ -9,23 +9,30 @@ p {
 }
 
 .job:nth-child(4n+1) {
-    background: #98E5FF;
-    border: 1px solid #98E5FF;
+    background: #3C657F;
+    border: 1px solid #3C657F;
+    color: white;
 
 }
 
 .job:nth-of-type(4n+2) {
-    background: #E5F8FF;
-      border: 1px solid #E5F8FF;
+    background: #78CBFF;
+      border: 1px solid #78CBFF;
 }
 
 .job:nth-of-type(4n+3) {
-    background: #60787F;
-      border: 1px solid #60787F;
+    background: #D1F8FF;
+      border: 1px solid #D1F8FF;
 }
 
 
 .job:nth-of-type(4n+4) {
-    background: #B7C7CC;
-      border: 1px solid #B7C7CC;
+    background: #2E5B81;
+      border: 1px solid #2E5B81;
+      color: white;
+}
+
+.job:nth-of-type(4n+5) {
+    background: #6096CC;
+      border: 1px solid #6096CC;
 }

@@ -19,10 +19,10 @@ const HeaderContainer = (props) => {
 
               <ul>
                 <li className="navLink">
-                  <Link to='/jobs/new'>Post A Job</Link>
+                  <Link to='/'>Home</Link>
                 </li>
                 <li className="navLink">
-                    <Link to="/pricing">Pricing</Link>
+                    <Link to="/jobs/new">Post a Job</Link>
                 </li>
                 <li className="navLink">
                   <Link to="/about">About</Link>
