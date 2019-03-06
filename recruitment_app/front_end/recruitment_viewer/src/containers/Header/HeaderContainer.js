@@ -10,12 +10,13 @@ const HeaderContainer = (props) => {
       <div className="header-container">
         <div className="header-left-techjobs">
 
-          <h1 className="logo">Tech Jobs</h1>
+          <h1 className="logo">consoleLog</h1>
           <p>The new way to recruit tech.</p>
 
         </div>
           <div className="header-right">
               <ul>
+
                 <li className="navLink">
                   <Link to='/'>Home</Link>
                 </li>
