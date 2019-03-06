@@ -18,7 +18,7 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args){
 
-        Job softwareDev = new Job("JP Morgan", "declan06023@hotmail.com",
+        Job job1 = new Job("JP Morgan", "declan06023@hotmail.com",
                 "011241131", "Joesph", "Software Developer",
                 "24,000", "Glasgow", "www.google.com",
                 "We are committed to ensuring that all job applicants are treated equally," +
@@ -30,8 +30,8 @@ public class DataLoader implements ApplicationRunner {
                         "you'll have involvement in all aspects of design and development.",
                 "2 years of JavaScript and SQL Knowledge",
                 "Software Developer", "Senior", "Full-Time");
-        jobRepository.save(softwareDev);
-        Job backEndDev = new Job("Spotify", "person123@gmail.com",
+        jobRepository.save(job1);
+        Job job2 = new Job("Spotify", "person123@gmail.com",
                 "013241231", "Megan", "Software Engineer - CoreX Backend",
                 "30,000", "London", "www.spotify.com",
                 "Innovation, collaboration, transparency, passion, and playfulness are a start." +
@@ -48,8 +48,8 @@ public class DataLoader implements ApplicationRunner {
                         "microservices architecture, building services for high volume traffic " +
                         "and build scalable systems.", "3+ years of Java", "Software Developer",
                 "Mid-Level", "Full-Time");
-        jobRepository.save(backEndDev);
-        Job tester = new Job("Big Pixel Studios", "jeses@bigpixelstudios.co.uk",
+        jobRepository.save(job2);
+        Job job3 = new Job("Big Pixel Studios", "jeses@bigpixelstudios.co.uk",
                 "01413237434", "Jeses", "QA Tester",
                 "28,000", "Glasgow", "www.bigpixelstudios.co.uk/",
                 "We are passionate about gaming and creating fun and interactive products", "Swift",
@@ -61,9 +61,9 @@ public class DataLoader implements ApplicationRunner {
                         "you'll have involvement in all aspects of design and development.",
                 "Knowledge of iOS and Android Family of devices and mobile submission process and knowledge of F2P",
                 "Tester", "Junior", "Full-Time");
-        jobRepository.save(tester);
+        jobRepository.save(job3);
 
-        Job job1 = new Job("Cudo Ventures Ltd", "hello@cudo.co.uk",
+        Job job4 = new Job("Cudo Ventures Ltd", "hello@cudo.co.uk",
                 "01413232328", "Joe", "Software Developer",
                 "40,000", "Bournemouth", "https://www.cudoventures.com/",
                 "The company is young, exciting and with a fast growing team. If you’ve always wanted to get stuck in from the ground up," +
@@ -79,9 +79,9 @@ public class DataLoader implements ApplicationRunner {
                         "you'll have involvement in all aspects of design and development.",
                 "You must have at least 3 years experience with software development.",
                 "Software Developer", "Mid-Level", "Full-Time");
-        jobRepository.save(job1);
+        jobRepository.save(job4);
 
-        Job job2 = new Job("KPV LAB", "hello@kpv.co.uk",
+        Job job5 = new Job("KPV LAB", "hello@kpv.co.uk",
                 "01415562245", "Joe", "JavaScript/React Developer",
                 "35,000", "Edinburgh", "https://www.kpv-lab.co.uk/jobs/javascript-developer/",
                 "Working with us will be a refreshing change from many places… We are a small tightly knit team passionate " +
@@ -101,11 +101,11 @@ public class DataLoader implements ApplicationRunner {
                         "interactive and visually immersive.",
                 "Software Developer", "Mid-Level", "Full-Time");
 
-        jobRepository.save(job2);
+        jobRepository.save(job5);
 
-        Job job3 = new Job("KPV LAB", "hello@kpv.co.uk",
+        Job job6 = new Job("KPV LAB", "hello@kpv.co.uk",
                 "01415562245", "Joe", "JavaScript/React Developer",
-                "35,000", "Edinburgh", "https://www.kpv-lab.co.uk/jobs/javascript-developer/",
+                "28,000", "Edinburgh", "https://www.kpv-lab.co.uk/jobs/javascript-developer/",
                 "Working with us will be a refreshing change from many places… We are a small tightly knit team passionate " +
                         "about making the best things possible without unnecessary compromise. Secure angel investment gives us the freedom to " +
                         "choose the path in realising our projects, and we work to our own schedule where the only deadlines are self imposed." +
@@ -121,10 +121,10 @@ public class DataLoader implements ApplicationRunner {
                         "to learn and improve." +
                         "Having a proper understanding of user experience and an appreciation for design is also crucial, all our projects are highly " +
                         "interactive and visually immersive.",
-                "Software Developer", "Mid-Level", "Full-Time");
-        jobRepository.save(job3);
+                "Software Developer", "Junior", "Internship");
+        jobRepository.save(job6);
 
-        Job job4 = new Job("Primo Associates", "hello@primoassociates.co.uk",
+        Job job7 = new Job("Primo Associates", "hello@primoassociates.co.uk",
                 "014155624345", "Sally", "Product Owner",
                 "50,000", "Glasgow", "https://www.primoassociates.com/job/product-owner-scotland-glasgow-461.aspx?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
                 "If you are a passionate and motivated team member, with a sound understanding of the fundamentals of agile iterative development,this could be the role for you!", "JavaScript ES6, WebGL, GLSL, CSS3-4, SVG, canvas",
@@ -137,9 +137,9 @@ public class DataLoader implements ApplicationRunner {
                         "Having a proper understanding of user experience and an appreciation for design is also crucial, all our projects are highly " +
                         "interactive and visually immersive.",
                 "Product Owner", "Mid-Level", "Full-Time");
-        jobRepository.save(job4);
+        jobRepository.save(job7);
 
-        Job job5 = new Job("AND Digital - Halifax", "hello@halifax.co.uk",
+        Job job8 = new Job("AND Digital - Halifax", "hello@halifax.co.uk",
                 "01415235325", "John", "Full Stack Developer",
                 "25,000", "Dundee", "https://and-digital.workable.com/j/0D990DF1A9",
                 "If you are a passionate and motivated team member, with a sound understanding of the " +
@@ -155,9 +155,9 @@ public class DataLoader implements ApplicationRunner {
                         "Passion for all things digital, software AND web applications (showcasing your own developments outside of your studies is a huge plus)" +
                         "Related Professional Work Experience; ideally one year work placement",
                 "Back-End Developer", "Junior", "Internship");
-        jobRepository.save(job5);
+        jobRepository.save(job8);
 
-        Job job6 = new Job("SurflineWaveTrak", "hello@SurflineWaveTrak.co.uk",
+        Job job9 = new Job("SurflineWaveTrak", "hello@SurflineWaveTrak.co.uk",
                 "01415235325", "Gill", "Software Engineer - Placement",
                 "32,000", "Kingsbridge", "https://surfline.applytojob.com/apply/job_" +
                 "20190219110449_IMGT5YS8RGYQAQLN/Software-Engineer-Placement?source=INDE",
@@ -181,9 +181,9 @@ public class DataLoader implements ApplicationRunner {
                         "NoSQL databases (specifically MongoDB)" +
                         "SQL databases (specifically MySQL).",
                 "Software Developer", "Junior", "Internship");
-        jobRepository.save(job6);
+        jobRepository.save(job9);
 
-        Job job7 = new Job("3 SIDED CUBE", "hello@cube.co.uk",
+        Job job10 = new Job("3 SIDED CUBE", "hello@cube.co.uk",
                 "014152353232", "Gill", "PHP Developer",
                 "40,000", "Bournemouth", "https://surfline.applytojob.com/apply/job_" +
                 "20190219110449_IMGT5YS8RGYQAQLN/Software-Engineer-Placement?source=INDE",
@@ -203,7 +203,7 @@ public class DataLoader implements ApplicationRunner {
                         "Experience using containerised applications and tools such as Docker and Docker Compose." +
                         "Experience working in a DevOps environment.",
                 "Back-End Developer", "Senior", "Full-Time");
-        jobRepository.save(job7);
+        jobRepository.save(job10);
 
     }
 
