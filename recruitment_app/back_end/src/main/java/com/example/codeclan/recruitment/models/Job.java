@@ -4,6 +4,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.*;
+import java.util.Date;
+import java.util.concurrent.atomic.AtomicLong;
+
 
 @Entity
 @Table(name="jobs")
@@ -12,6 +15,9 @@ public class Job {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name="date_created")
+    private Long dateCreated;
     @Column(name = "company_name")
     private String companyName;
     @Column(name = "contact_email")
@@ -45,7 +51,10 @@ public class Job {
     @Column(name = "job_type")
     private String jobType;
 
-    public Job(String companyName, String contactEmail, String contactPhoneNumber, String contactName, String title, String salary, String location, String applicationUrl, String companyCulture, String techStack, String yourTeam, String responsibilities, String requirements, String role, String skillLevel, String jobType) {
+    public Job(String companyName, String contactEmail, String contactPhoneNumber,
+               String contactName,
+               String title, String salary, String location, String applicationUrl, String companyCulture, String techStack, String yourTeam, String responsibilities, String requirements, String role, String skillLevel, String jobType) {
+        this.dateCreated = new Date().getTime();
         this.companyName = companyName;
         this.contactEmail = contactEmail;
         this.contactPhoneNumber = contactPhoneNumber;
@@ -65,6 +74,23 @@ public class Job {
     }
 
     public Job() {
+    }
+
+
+    public Long getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(Long dateCreated) {
+        this.dateCreated = dateCreated;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getCompanyName() {
