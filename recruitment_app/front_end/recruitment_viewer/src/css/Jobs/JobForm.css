@@ -3,3 +3,19 @@
   padding-left: 20rem;
   padding-right: 20rem;
 }
+
+#company-culture-text-area{
+  height:100px;
+}
+
+#your-team-text-area{
+height:100px;
+}
+
+#your-responsibilities-text-area{
+height:200px;
+}
+
+#your-requirements-text-area{
+height:200px;
+}

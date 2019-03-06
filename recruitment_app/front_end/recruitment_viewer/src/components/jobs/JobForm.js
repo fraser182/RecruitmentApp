@@ -39,73 +39,27 @@ const JobsForm = (props) => {
 
       <FormGroup>
         <Label for="exampleText">Company Name</Label>
-        <Input type="textarea" name="companyName" id="exampleText" />
+        <Input type="text" name="companyName" id="exampleText" />
       </FormGroup>
 
           <FormGroup>
           <Label for="exampleEmail">Contact Email</Label>
-          <Input type="email" name="contactEmail" id="exampleEmail" placeholder="with a placeholder" />
+          <Input type="email" name="contactEmail" id="exampleEmail" placeholder="email@work.com" />
           </FormGroup>
 
           <FormGroup>
            <Label for="exampleText">Contact Name</Label>
-           <Input type="textarea" name="contactName" id="exampleText" />
+           <Input type="text" name="contactName" id="exampleText" />
           </FormGroup>
 
           <FormGroup>
           <Label for="exampleText">Contact Phone Number</Label>
-          <Input type="textarea" name="contactPhoneNumber" id="exampleText" />
+          <Input type="text" name="contactPhoneNumber" id="exampleText" />
           </FormGroup>
 
           <FormGroup>
           <Label for="exampleText">Title</Label>
-          <Input type="textarea" name="title" id="exampleText" />
-          </FormGroup>
-
-          <FormGroup>
-            <Label for="exampleSelect">Salary</Label>
-            <Input type="select" name="salary" id="exampleSelect">
-            <option>18,000</option>
-            <option>20,000+</option>
-            <option>25,000+</option>
-            <option>30,000+</option>
-            <option>50,000+</option>
-            </Input>
-          </FormGroup>
-
-          <FormGroup>
-          <Label for="exampleText">Location</Label>
-          <Input type="textarea" name="location" id="exampleText" />
-          </FormGroup>
-
-          <FormGroup>
-          <Label for="exampleUrl">Application URL</Label>
-          <Input type="text" name="applicationUrl" id="url" placeholder="url placeholder"/>
-          </FormGroup>
-
-          <FormGroup>
-          <Label for="exampleText">Company Culture</Label>
-          <Input type="textarea" name="companyCulture" id="exampleText" />
-          </FormGroup>
-
-          <FormGroup>
-          <Label for="exampleText">Tech Stack</Label>
-          <Input type="textarea" name="techStack" id="exampleText" />
-          </FormGroup>
-
-          <FormGroup>
-          <Label for="exampleText">Your Team</Label>
-          <Input type="textarea" name="yourTeam" id="exampleText" />
-          </FormGroup>
-
-          <FormGroup>
-          <Label for="exampleText">Responsibilities</Label>
-          <Input type="textarea" name="responsibilities" id="exampleText" />
-          </FormGroup>
-
-          <FormGroup>
-          <Label for="exampleText">Requirements</Label>
-          <Input type="textarea" name="requirements" id="exampleText" />
+          <Input type="text" name="title" id="exampleText" />
           </FormGroup>
 
           <FormGroup>
@@ -135,6 +89,52 @@ const JobsForm = (props) => {
             <option>Internship</option>
             <option>Temporary</option>
             </Input>
+          </FormGroup>
+
+          <FormGroup>
+            <Label for="exampleSelect">Salary</Label>
+            <Input type="select" name="salary" id="exampleSelect">
+            <option>18,000</option>
+            <option>20,000+</option>
+            <option>25,000+</option>
+            <option>30,000+</option>
+            <option>50,000+</option>
+            </Input>
+          </FormGroup>
+
+          <FormGroup>
+          <Label for="exampleText">Location</Label>
+          <Input type="text" name="location" id="exampleText" />
+          </FormGroup>
+
+          <FormGroup>
+          <Label for="exampleUrl">Application URL</Label>
+          <Input type="text" name="applicationUrl" id="url" placeholder="http://www.example.com"/>
+          </FormGroup>
+
+          <FormGroup>
+          <Label for="exampleText">Tech Stack</Label>
+          <Input type="text" name="techStack" id="exampleText" />
+          </FormGroup>
+
+          <FormGroup>
+          <Label for="exampleText">Company Culture</Label>
+          <Input type="textarea" name="companyCulture" id="company-culture-text-area" />
+          </FormGroup>
+
+          <FormGroup>
+          <Label for="exampleText">Your Team</Label>
+          <Input type="textarea" name="yourTeam" id="your-team-text-area" />
+          </FormGroup>
+
+          <FormGroup>
+          <Label for="exampleText">Responsibilities</Label>
+          <Input type="textarea" name="responsibilities" id="your-responsibilities-text-area" />
+          </FormGroup>
+
+          <FormGroup>
+          <Label for="exampleText">Requirements</Label>
+          <Input type="textarea" name="requirements" id="your-requirements-text-area" />
           </FormGroup>
 
           <Button type="submit">Submit</Button>
