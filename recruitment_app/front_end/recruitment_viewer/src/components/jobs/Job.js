@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../css/Jobs/Job.css';
-import { UncontrolledCollapse} from 'reactstrap';
+import { UncontrolledCollapse, Button} from 'reactstrap';
 
 const Job = (props) => {
   if (!props.job){
@@ -8,7 +8,9 @@ const Job = (props) => {
   }
   const expandDivId = `L` + props.job.dateCreated;
   const hashExpandedDivId = `#` + expandDivId;
-
+  const handleClick = (event) => {
+    window.location.replace(props.job.applicationUrl)
+  }
   return (
 
     <div className="job" id={expandDivId}>
@@ -36,7 +38,7 @@ const Job = (props) => {
     <div className="job-lower">
       <div className="job-lower-left">
         <p>{props.job.techStack}</p>
-        <p>{props.job.applicationUrl}</p>
+        <Button color="primary" target="_blank" onClick={handleClick}>Apply</Button>
         </div>
 
         <div className="job-lower-right">
