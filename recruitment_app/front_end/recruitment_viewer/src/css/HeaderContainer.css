@@ -4,13 +4,74 @@
   justify-content: space-between;
   background-color: #eee;
   padding: 1.5rem;
+  border: 1px solid red;
+}
+
+.header-left-techjobs{
+  border: 1px solid red;
 }
 
 .active {
-    color: red;
-    text-decoration: none;
-  }
+  color: red;
+  text-decoration: none;
+}
 
 ul {
   list-style-type: none;
+
+}
+
+li {
+
+  list-style-type: none;
+
+}
+
+.logo {
+  font-size: 5em;
+  border: 1px solid green;
+}
+
+p {
+  font-size: 1.1em;
+  font-weight: 500;
+  /* border: 1px solid green; */
+}
+
+.header-right{
+  border: 1px solid green;
+}
+
+.link {
+  user-select: none;
+  text-decoration: none;
+}
+
+a {
+
+  text-decoration: none;
+}
+
+.navLink{
+  color: pink;
+}
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  text-decoration: none;
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: red;
 }

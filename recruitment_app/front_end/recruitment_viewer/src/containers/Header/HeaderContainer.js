@@ -11,7 +11,7 @@ const HeaderContainer = (props) => {
         <div className="header-left-techjobs">
         <Container fluid>
           <h1 className="display-3">Tech Jobs</h1>
-          <p className="lead">This is the new way to recruit tech.</p>
+          <p>The new way to recruit tech.</p>
         </Container>
         </div>
           <div className="header-right">
