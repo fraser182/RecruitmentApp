@@ -20,7 +20,7 @@ public class DataLoader implements ApplicationRunner {
 
         Job job1 = new Job("JP Morgan", "declan06023@hotmail.com",
                 "011241131", "Joesph", "Software Developer",
-                "24,000", "Glasgow", "www.google.com",
+                "24,000", "Glasgow", "https://www.google.com",
                 "We are committed to ensuring that all job applicants are treated equally," +
                 " without discrimination because of gender, sexual orientation, marital or civil partner status, gender reassignment," +
                 " race, colour, nationality, ethnic or national origin, religion or belief, disability or age.", "JavaScript",
@@ -33,7 +33,7 @@ public class DataLoader implements ApplicationRunner {
         jobRepository.save(job1);
         Job job2 = new Job("Spotify", "person123@gmail.com",
                 "013241231", "Megan", "Software Engineer - CoreX Backend",
-                "30,000", "London", "www.spotify.com",
+                "30,000", "London", "https://www.spotify.com",
                 "Innovation, collaboration, transparency, passion, and playfulness are a start." +
                         " We believe our culture is a core part of what makes Spotify successful." +
                         " We’re looking for someone who understands a good culture" +
@@ -51,7 +51,7 @@ public class DataLoader implements ApplicationRunner {
         jobRepository.save(job2);
         Job job3 = new Job("Big Pixel Studios", "jeses@bigpixelstudios.co.uk",
                 "01413237434", "Jeses", "QA Tester",
-                "28,000", "Glasgow", "www.bigpixelstudios.co.uk/",
+                "28,000", "Glasgow", "https://www.bigpixelstudios.co.uk/",
                 "We are passionate about gaming and creating fun and interactive products", "Swift",
                 "You will be working with a professional team who are passionate about technology and work on " +
                         "cutting-edge projects.",
@@ -80,6 +80,7 @@ public class DataLoader implements ApplicationRunner {
                 "You must have at least 3 years experience with software development.",
                 "Software Developer", "Mid-Level", "Full-Time");
         jobRepository.save(job4);
+
 
         Job job5 = new Job("KPV LAB", "hello@kpv.co.uk",
                 "01415562245", "Joe", "JavaScript/React Developer",

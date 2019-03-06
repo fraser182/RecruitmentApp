@@ -8,19 +8,19 @@
 }
 
 .job h5{
-  font-weight:600;
+  font-weight:500;
 
 }
 
 
 .job p {
-  font-weight: 300;
-font-size: 1.1em;
+  font-weight: 100;
+font-size: 1.0em;
 }
 
 .job:nth-child(5n+1) {
   background: #3C657F;
-  
+
   color: white;
 
 }

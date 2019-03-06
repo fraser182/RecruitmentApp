@@ -1,11 +1,20 @@
 .filter-container{
   padding-top: 1%;
   /* border: 1px solid green; */
-
 }
 
 div.text-right {
   padding-right: 1.5rem;
   /* border: 1px solid orange; */
 
+}
+
+.col.filter-role {
+  max-width: 29.25%;
+}
+.col.filter-jobtype {
+max-width: 29.25%;
+}
+.col.filter-skill {
+max-width: 29.25%;
 }

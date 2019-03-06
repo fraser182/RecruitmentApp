@@ -163,6 +163,7 @@ class FilterContainer extends Component {
       </div>
 
       </div>
+          <Button className="text-right"outline color="secondary" href="/">Reset</Button>
       </CardBody>
       </Card>
       </Collapse>
