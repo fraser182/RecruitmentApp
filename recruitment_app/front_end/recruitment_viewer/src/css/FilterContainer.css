@@ -1,3 +1,11 @@
+.filter-container{
+  padding-top: 1%;
+  /* border: 1px solid green; */
+
+}
+
 div.text-right {
-  padding-left: 10px;
+  padding-right: 1.5rem;
+  /* border: 1px solid orange; */
+
 }

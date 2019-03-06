@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../css/HeaderContainer.css';
-import { Container } from 'reactstrap';
+// import { Container } from 'reactstrap';
 import { Link } from 'react-router-dom';
 // import About from '../../components/about.js';
 
@@ -9,14 +9,12 @@ const HeaderContainer = (props) => {
   return (
       <div className="header-container">
         <div className="header-left-techjobs">
-        <Container fluid>
-          <h1 className="display-3">Tech Jobs</h1>
+
+          <h1 className="logo">Tech Jobs</h1>
           <p>The new way to recruit tech.</p>
-        </Container>
+
         </div>
           <div className="header-right">
-            <div className="text-right">
-
               <ul>
                 <li className="navLink">
                   <Link to='/'>Home</Link>
@@ -32,10 +30,9 @@ const HeaderContainer = (props) => {
                   <Link to="#">Contact</Link>
                 </li>
               </ul>
-
             </div>
           </div>
-        </div>
+
   )
 }
 
