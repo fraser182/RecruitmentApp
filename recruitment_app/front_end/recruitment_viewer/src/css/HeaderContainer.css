@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #eee;
+  background-color: #D2E9F7;
   padding: 1.5rem;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .header-left-techjobs{
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .active {
@@ -16,30 +16,36 @@
   text-decoration: none;
 }
 
+
+
 ul {
   list-style-type: none;
+
 
 }
 
 li {
+  color: red;
 
-  list-style-type: none;
 
 }
 
 .logo {
-  font-size: 5em;
-  border: 1px solid green;
+  font-size: 5.2em;
+  font-weight: 400;
+  /* border: 1px solid green; */
 }
 
 p {
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: 500;
   /* border: 1px solid green; */
 }
 
 .header-right{
-  border: 1px solid green;
+  /* border: 1px solid green; */
+  text-align: right;
+
 }
 
 .link {
@@ -50,28 +56,27 @@ p {
 a {
 
   text-decoration: none;
+  font-size: 1.2em;
 }
 
-.navLink{
-  color: pink;
-}
+
 /* unvisited link */
-a:link {
-  color: red;
-}
+/* a:link {
+  color: #007bff;
+} */
 
 /* visited link */
-a:visited {
-  color: black;
-}
+/* a:visited {
+  color: #007bff;
+} */
 
 /* mouse over link */
-a:hover {
+/* a:hover {
   text-decoration: none;
   color: hotpink;
-}
+} */
 
 /* selected link */
-a:active {
+/* a:active {
   color: red;
-}
+} */
